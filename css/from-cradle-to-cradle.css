@@ -1,0 +1,230 @@
+/* =========================================================
+   SPLI From Cradle to Cradle Page
+   ========================================================= */
+
+/* Tambahkan style khusus halaman From Cradle to Cradle di sini. */
+/* Hero Image - From Cradle to Cradle */
+.from-cradle-to-cradle-hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(7, 19, 31, 0.82) 0%,
+      rgba(7, 19, 31, 0.58) 48%,
+      rgba(7, 19, 31, 0.22) 100%
+    ),
+    url("../assets/image/cradle-to-cradle.webp");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.from-cradle-to-cradle-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.from-cradle-to-cradle-hero .breadcrumb a,
+.from-cradle-to-cradle-hero .breadcrumb span,
+.from-cradle-to-cradle-hero .eyebrow {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.from-cradle-to-cradle-hero .eyebrow {
+  color: var(--acid-green);
+}
+
+.from-cradle-to-cradle-hero h1 {
+  color: #ffffff;
+}
+
+.from-cradle-to-cradle-hero .hero-desc {
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+/* ── Cradle Comparison Section ───────────────────── */
+/* Layout utama: teks kiri, card kanan */
+.cradle-compare-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(560px, 0.75fr);
+  gap: clamp(36px, 5vw, 72px);
+  align-items: center;
+}
+
+/* Teks kiri tetap */
+.cradle-compare-copy {
+  max-width: 640px;
+}
+
+.cradle-compare-copy h4 {
+  text-align: left;
+}
+
+.cradle-compare-copy p {
+  text-align: justify;
+}
+
+/* Card kanan berdampingan */
+.cradle-compare-visual {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 18px;
+  max-width: 620px;
+  justify-self: end;
+}
+
+/* Card lebih besar dan rapi */
+.cradle-image-card {
+  overflow: hidden;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 24px 65px rgba(7, 19, 31, 0.14);
+}
+
+/* Gambar diperbesar dan seluruh isi gambar terbaca */
+.cradle-image-card img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+/* Caption tetap di bawah, bukan menimpa gambar */
+.cradle-card-caption {
+  position: static;
+  padding: 18px 20px;
+  border-radius: 0;
+  background: #ffffff;
+}
+
+.cradle-card-caption span {
+  display: block;
+  margin-bottom: 24px;
+  color: #07131f;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.cradle-card-caption h5 {
+  margin: 0;
+  color: #07131f;
+  font-size: 1.15rem;
+  line-height: 1.15;
+  font-weight: 900;
+}
+/* ── Responsive From Cradle to Cradle ───────────────── */
+
+@media (max-width: 860px) {
+  .cradle-compare-section {
+    padding: 64px 0;
+  }
+
+  .cradle-compare-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .cradle-compare-copy {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .cradle-compare-copy h4 {
+    font-size: clamp(1.6rem, 8vw, 2.4rem);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+  }
+
+  .cradle-compare-copy p {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    text-align: left;
+  }
+
+  .cradle-compare-visual {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    width: 100%;
+    max-width: 100%;
+    justify-self: stretch;
+  }
+
+  .cradle-image-card {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .cradle-image-card img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+    background: #ffffff;
+  }
+
+  .cradle-card-caption {
+    position: static;
+    padding: 18px;
+    border-radius: 0;
+    background: #ffffff;
+  }
+
+  .cradle-card-caption span {
+    margin-bottom: 14px;
+    color: #07131f;
+    font-size: 0.72rem;
+  }
+
+  .cradle-card-caption h5 {
+    color: #07131f;
+    font-size: 1.15rem;
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 480px) {
+  .cradle-compare-section {
+    padding: 52px 0;
+  }
+
+  .cradle-compare-grid {
+    gap: 28px;
+  }
+
+  .cradle-compare-copy h4 {
+    font-size: 1.45rem;
+  }
+
+  .cradle-compare-copy p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .cradle-image-card {
+    border-radius: 14px;
+  }
+
+  .cradle-card-caption {
+    padding: 16px;
+  }
+
+  .cradle-card-caption h5 {
+    font-size: 1.05rem;
+  }
+}

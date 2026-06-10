@@ -1,0 +1,295 @@
+/* =========================================================
+   SPLI Teknologi Pengolahan Limbah B3 Page
+   ========================================================= */
+
+/* Tambahkan style khusus halaman teknologi pengolahan limbah B3 di sini. */
+/* ── Hero Background Teknologi Pengolahan Limbah B3 ── */
+.teknologi-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 19, 31, 0.88) 0%,
+      rgba(7, 19, 31, 0.68) 46%,
+      rgba(7, 19, 31, 0.38) 100%
+    ),
+    url("../assets/image/insenerator-limbah.webp") center / cover no-repeat;
+}
+
+.teknologi-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 78% 28%,
+      rgba(185, 255, 102, 0.2),
+      transparent 34%
+    ),
+    linear-gradient(180deg, rgba(7, 19, 31, 0.08), rgba(7, 19, 31, 0.52));
+}
+
+.teknologi-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.teknologi-hero .breadcrumb,
+.teknologi-hero .eyebrow,
+.teknologi-hero h1,
+.teknologi-hero .hero-desc {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 860px) {
+  .cursor-glow {
+    display: none;
+  }
+
+  .site-header {
+    top: 10px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+    padding: 22px;
+    border-radius: 24px;
+    background: rgba(7, 19, 31, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav a,
+  .nav-dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .site-nav a.active::after,
+  .nav-dropdown.is-active .nav-dropdown-toggle::before {
+    display: none;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    min-width: 0;
+    transform: none;
+    display: none;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav-dropdown-menu::before {
+    display: none;
+  }
+
+  .nav-dropdown.is-open .nav-dropdown-menu {
+    display: grid;
+    transform: none;
+  }
+
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown:focus-within .nav-dropdown-menu {
+    transform: none;
+  }
+
+  .nav-dropdown-menu a {
+    padding: 10px 12px;
+    font-size: 0.88rem;
+  }
+
+  .hero-grid,
+  .split-grid,
+  .process-grid,
+  .advantage-grid,
+  .contact-card,
+  .footer-grid,
+  .about-grid,
+  .service-detail-grid,
+  .service-detail-grid.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .hero {
+    padding-top: 110px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 16vw, 5rem);
+  }
+
+  .hero.hero-cinematic h1 {
+    max-width: 100%;
+    font-size: clamp(2.45rem, 11vw, 3.75rem);
+    line-height: 1;
+    letter-spacing: -0.052em;
+  }
+
+  .hero.hero-cinematic::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(7, 19, 31, 0.62) 0%,
+        rgba(7, 19, 31, 0.38) 54%,
+        rgba(7, 19, 31, 0.58) 100%
+      ),
+      radial-gradient(
+        circle at 70% 20%,
+        rgba(185, 255, 102, 0.1),
+        transparent 34%
+      );
+  }
+
+  .hero.hero-cinematic .hero-subtitle {
+    max-width: 100%;
+  }
+
+  .hero-visual {
+    min-height: 360px;
+  }
+
+  .orbital-card {
+    width: 170px;
+    padding: 14px;
+  }
+
+  .metrics-grid,
+  .advantage-cards,
+  .stats-grid,
+  .values-grid,
+  .contact-info-grid,
+  .cert-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visi-misi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .service-panel-light {
+    grid-template-columns: 1fr;
+  }
+
+  .sticky-heading {
+    position: static;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero {
+    padding: 130px 0 60px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.2rem, 10vw, 4rem);
+  }
+
+  .cta-banner {
+    padding: 40px 24px;
+  }
+
+  .saapro-service-heading,
+  .why-spli-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stack-card {
+    position: relative;
+    top: auto;
+    grid-template-columns: 1fr;
+    min-height: auto;
+    transform: none;
+  }
+
+  .stack-card-media {
+    min-height: 220px;
+  }
+
+  .why-slider {
+    min-height: 560px;
+    padding: 18px;
+  }
+
+  .why-card-stage {
+    inset: 118px 18px 18px;
+  }
+
+  .why-tabs {
+    gap: 8px;
+  }
+
+  .why-tabs label {
+    min-height: 40px;
+    padding: 0 13px;
+    font-size: 0.86rem;
+  }
+}
+
+@media (min-width: 861px) and (max-width: 1100px) {
+  .advantage-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.teknologi-hero {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 19, 31, 0.82) 0%,
+      rgba(7, 19, 31, 0.66) 55%,
+      rgba(7, 19, 31, 0.86) 100%
+    ),
+    url("../assets/image/insenerator-limbah.webp") center / cover no-repeat;
+}
